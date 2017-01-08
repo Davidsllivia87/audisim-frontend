@@ -1,0 +1,30 @@
+.menu_top {
+    background-color: #26C86AD;
+    color: #d6d6d6;
+}
+
+.menu_top_op{
+    background-color: #6C86AD;
+    width: 100%;
+    border-bottom-style: double;
+    text-align: left;
+    display: table;
+    height: 60px;
+}
+
+.menu_top_op:hover{
+    background-color: #b4c19b;
+}
+
+.bar_top_last{
+}
+
+.menu_top_text{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Montserrat;
+    color: #d6d6d6;
+    font-size: 20px;
+    display: table-cell;
+}

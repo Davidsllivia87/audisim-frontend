@@ -1,0 +1,28 @@
+<table class="table">
+    <tbody>
+        <tr class="project_table_headers">
+            <td>Nombre Proyecto</td>
+            <td>Tipo de Proyecto</td>
+            <td>Estado</td>
+            <td>Cliente</td>
+            <td>Grupo</td>
+            <td>Notas</td>
+            <td>Fecha estados financieros</td>
+            <td>Procesos acabados</td>
+            <td>Fecha informe</td>
+        </tr>
+        {% for project in projects %}
+        <tr class="project_table_row_even">
+            <td><a href="{% url 'project_detail' %}">{{project.name}}</a></td>
+            <td>{{project.project_type}}</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>{{project.startDate}}</td>
+            <td>{{project.startDate}}</td>
+            <td>{{project.startDate}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

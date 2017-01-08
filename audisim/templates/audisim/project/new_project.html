@@ -1,0 +1,44 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/style_base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/main_banner.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/nav_menu.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/menu_lat.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/project/project_base.css' %}" />
+</head>
+<body>
+{% include 'audisim/base/main_banner.html' %}
+<div class="big_frame">
+    {% include 'audisim/base/nav_menu.html' %}
+
+    <div class="work_area">
+    <form class="my_form" action="" method="post">
+        {% csrf_token %}
+        <div class="project_section_id">
+            <div class="section_banner"><span class="section_banner_top">Informacion basica</span></div>
+                {% render_field new_project_form.project_name placeholder=new_project_form.project_name.label %}
+                {{new_project_form.project_type}}
+                {% render_field new_project_form.project_estimated_hours placeholder=new_project_form.project_estimated_hours.label %}
+                {% render_field new_project_form.project_fees placeholder=new_project_form.project_fees.label %}
+                {% render_field new_project_form.project_is_public placeholder=new_project_form.project_is_public.label %}
+        </div>
+        <div class="project_section_dates">
+            <div class="section_banner"><span class="section_banner_medium">Fechas destacadas</span></div>
+            {% render_field new_project_form.project_start_date placeholder=new_project_form.project_start_date.label %}
+            {% render_field new_project_form.project_report_date placeholder=new_project_form.project_report_date.label %}
+            {% render_field new_project_form.project_letter_date placeholder=new_project_form.project_letter_date.label %}
+            {% render_field new_project_form.project_order_date placeholder=new_project_form.project_order_date.label %}
+        </div>
+        <div class="project_section_team">
+            <div class="section_banner"><span class="section_banner_medium">Equipo</span></div>
+        </div>
+        <input type="submit" value="Crear"/>
+    </form>
+</div>
+</div>
+{% include 'audisim/base/bottom_banner.html' %}
+</body>
+</html>

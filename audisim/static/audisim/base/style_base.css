@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f6f9;
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu_lat{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.body_main{
+    float: left;
+    width: 1000%;
+    height: 100%;
+    background-color: #b9cdea;
+}
+.big_frame{
+    width: 100%;
+    display: table;
+    background-color: #b9cdea;
+}
+
+.work_area{
+    width: 90%;
+    background: #b9cdea;
+    display: table-cell;
+}

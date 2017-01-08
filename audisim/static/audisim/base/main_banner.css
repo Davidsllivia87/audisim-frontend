@@ -1,0 +1,42 @@
+.menu_bar {
+    background-color: #3d4249;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px;
+    font-family: Montserrat;
+    color: #d6d6d6;
+    height: 70px;
+}
+
+.bar_op{
+    background-color: #3d4249;
+    float: left;
+    padding-right: 10px;
+}
+
+.bar_op_last{
+    background-color: #3d4249;
+    padding-right: 10px;
+    float: none;
+}
+
+.bar_op_empty{
+    background-color: #3d4249;
+    padding-right: 10px;
+    float: left;
+    width: 80%;
+}
+
+.banner_bottom {
+    background-color: #3d4249;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px;
+    font-family: Montserrat;
+    color: #d6d6d6;
+    height: 70px;
+    float: left;
+    width: 100%;
+}

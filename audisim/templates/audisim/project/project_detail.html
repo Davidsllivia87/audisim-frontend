@@ -1,0 +1,84 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/style_base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/main_banner.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/nav_menu.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/menu_lat.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/project/project_base.css' %}" />
+</head>
+<body>
+{% include 'audisim/base/main_banner.html' %}
+<div class="big_frame">
+    {% include 'audisim/base/nav_menu.html' %}
+
+    <div class="work_area">
+    <form class="my_form" action="" method="post">
+        {% csrf_token %}
+        <div class="project_section_id">
+            <div class="section_banner"><span class="section_banner_top">Nombre de proyecto</span></div>
+            <div class="section_banner"><span class="section_banner_top">Informacion básica</span></div>
+                <table class="table">
+                    <tbody>
+                        <tr class="project_table_row_even">
+                            <td>Tipo de Proyecto</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Entidad de interes publico</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Horas estimadas</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Honorarios</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Cliente</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Grupo</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="project_section_dates">
+            <div class="section_banner"><span class="section_banner_medium">Fechas destacadas</span></div>
+            <table class="table">
+                    <tbody>
+                        <tr class="project_table_row_even">
+                            <td>Fecha de estados financieros</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Fecha de encargo</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Fecha de informe</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="project_table_row_even">
+                            <td>Fecha de carta de manifestaciones</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="project_section_team">
+            <div class="section_banner"><span class="section_banner_medium">Equipo</span></div>
+        </div>
+        <input type="submit" value="Crear"/>
+    </form>
+</div>
+</div>
+{% include 'audisim/base/bottom_banner.html' %}
+</body>
+</html>

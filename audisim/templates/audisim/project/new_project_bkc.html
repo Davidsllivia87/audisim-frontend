@@ -1,0 +1,58 @@
+{% load static %}
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/style_base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/main_banner.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/nav_menu.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/base/menu_lat.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'audisim/project/project_base.css' %}" />
+</head>
+<body>
+{% include 'audisim/base/main_banner.html' %}
+<div class="big_frame">
+    {% include 'audisim/base/nav_menu.html' %}
+
+    <div class="work_area">
+    <form class="my_form" action="" method="post">
+        {% csrf_token %}
+        <div class="project_section_id">
+            <div class="section_banner"><span class="section_banner_top">Informacion basica</span></div>
+            <div class="form_pair">
+                <div class="form_key">{{new_project_form.project_name.label_tag}}</div>
+                <div class="form_value">{{new_project_form.project_name}}</div>
+            </div>
+            <div class="form_pair">
+                <div class="form_key">{{new_project_form.project_type.label_tag}}</div>
+                <div class="form_value">{{new_project_form.project_type}}</div>
+            </div>
+            <div class="form_pair">
+                <div class="form_key">{{new_project_form.project_estimated_hours.label_tag}}</div>
+                <div class="form_value">{{new_project_form.project_estimated_hours}}</div>
+            </div>
+            <div class="form_pair">
+                <div class="form_key">{{new_project_form.project_fees.label_tag}}</div>
+                <div class="form_value">{{new_project_form.project_fees}}</div>
+            </div>
+            <div class="form_pair">
+                <div class="form_key">{{new_project_form.project_is_public.label_tag}}</div>
+                <div class="form_value">{{new_project_form.project_is_public}}</div>
+            </div>
+        </div>
+        <div class="project_section_dates">
+            <div class="section_banner"><span class="section_banner_medium">Fechas destacadas</span></div>
+            <div class="form_pair">{{new_project_form.project_start_date.label_tag}}{{new_project_form.project_start_date}}</div>
+            <div class="form_pair">{{new_project_form.project_report_date.label_tag}}{{new_project_form.project_report_date}}</div>
+            <div class="form_pair">{{new_project_form.project_letter_date.label_tag}}{{new_project_form.project_letter_date}}</div>
+            <div class="form_pair">{{new_project_form.project_order_date.label_tag}}{{new_project_form.project_order_date}}</div>
+        </div>
+        <div class="project_section_team">
+            <div class="section_banner"><span class="section_banner_medium">Equipo</span></div>
+        </div>
+        <input type="submit" value="Crear"/>
+    </form>
+</div>
+</div>
+{% include 'audisim/base/bottom_banner.html' %}
+</body>
+</html>
