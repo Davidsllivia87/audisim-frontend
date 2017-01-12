@@ -14,7 +14,7 @@ projects = [projectA,projectB]
 
 class NameForm(forms.Form):
     project_name = forms.CharField(label='Nombre de Proyecto')
-    project_type = forms.ChoiceField(label='Tipo de proyecto', choices=[('1','Auditoria'),('2','Otros')])
+    project_type = forms.ChoiceField(label='Tipo de proyecto', choices=[('',''),('1','Auditoria'),('2','Otros')])
     project_start_date = forms.DateField(label='Fecha de inicio')
     project_estimated_hours = forms.IntegerField(label='Horas estimadas',min_value=0,max_value=99999)
     project_fees = forms.FloatField(label='Honorarios',min_value=0,max_value=99999)

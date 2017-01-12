@@ -20,7 +20,8 @@
         <div class="project_section_id">
             <div class="section_banner"><span class="section_banner_top">Informacion basica</span></div>
                 {% render_field new_project_form.project_name placeholder=new_project_form.project_name.label %}
-                {{new_project_form.project_type}}
+                {% render_field new_project_form.project_type placeholder=new_project_form.project_type.label %}
+                <!--{{new_project_form.project_type}}-->
                 {% render_field new_project_form.project_estimated_hours placeholder=new_project_form.project_estimated_hours.label %}
                 {% render_field new_project_form.project_fees placeholder=new_project_form.project_fees.label %}
                 {% render_field new_project_form.project_is_public placeholder=new_project_form.project_is_public.label %}

@@ -67,4 +67,8 @@
 }
 .my_form select{
     margin: 15px 25% 0% 25%;
+    font-size: 20px;
+    padding: 10px;
+    width: 50%;
+    height: 47px;
 }
